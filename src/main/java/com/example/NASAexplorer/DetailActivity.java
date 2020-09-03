@@ -41,6 +41,7 @@ public class DetailActivity extends AppCompatActivity {
         TextView details = findViewById(R.id.description);
 
         details.setMovementMethod(new ScrollingMovementMethod());
+        titleTv.setMovementMethod(new ScrollingMovementMethod());
 
 
         Picasso.get().load(imageUrl).into(imageView);

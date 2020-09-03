@@ -10,60 +10,54 @@
 
     <ImageView
         android:id="@+id/ImgV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="330dp"
+        android:layout_height="270dp"
         android:layout_margin="16dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.237" />
 
-    <!-- <WebView
-        android:id="@+id/webview"
-        android:layout_width="350dp"
-        android:layout_height="250dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32"/>
-        -->
 
     <TextView
         android:id="@+id/titleTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:scrollbars="vertical"
         android:text="Title"
+        android:textAlignment="center"
         android:textColor="#F31919"
         android:textSize="20dp"
+
         android:textStyle="bold"
-        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/ImgV"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.246"
-        android:gravity="center_horizontal" />
+        app:layout_constraintVertical_bias="0.578" />
 
     <TextView
         android:id="@+id/description"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_width="350dp"
+        android:layout_height="255dp"
         android:layout_margin="5dp"
+        android:gravity="center_horizontal"
         android:scrollbars="vertical"
         android:text="Description"
         android:textAlignment="center"
-        android:textColor="@android:color/white"
+        android:textColor="#ffffff"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ImgV"
-        app:layout_constraintVertical_bias="0.839"
-        android:gravity="center_horizontal" />
+        app:layout_constraintVertical_bias="0.794" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

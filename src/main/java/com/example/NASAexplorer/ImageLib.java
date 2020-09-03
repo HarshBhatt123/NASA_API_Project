@@ -51,6 +51,7 @@ public class ImageLib extends AppCompatActivity implements adapter.OnItemClickLi
 
         setContentView(R.layout.activity_image_lib);
         mTypeSearch = findViewById(R.id.et);
+
         mGo = findViewById(R.id.bn);
         mRecyclerView=findViewById(R.id.recycler);
         mRecyclerView.setHasFixedSize(true);
@@ -70,23 +71,23 @@ public class ImageLib extends AppCompatActivity implements adapter.OnItemClickLi
 //        listView.setAdapter(adapter);
 
         mTypeSearch.addTextChangedListener(new TextWatcher() {
+
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                q = mTypeSearch.getText().toString();
-                getAPIdata();
-                Toast.makeText(ImageLib.this, "Please wait , fetching data", Toast.LENGTH_SHORT).show();
-
+                if(mTypeSearch.getText().toString().trim().equals("")){
+                    Toast.makeText(ImageLib.this, "Type Something", Toast.LENGTH_SHORT).show();
+                }else {
+                    q = mTypeSearch.getText().toString();
+                    getAPIdata();
+                }
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-
-
 
             }
         });
@@ -97,10 +98,15 @@ public class ImageLib extends AppCompatActivity implements adapter.OnItemClickLi
         mGo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clearDataRecyclerView();
-                Toast.makeText(ImageLib.this, "Please wait , fetching data", Toast.LENGTH_SHORT).show();
-                q = mTypeSearch.getText().toString();
-                getAPIdata();
+                if(mTypeSearch.getText().toString().trim().equals("")){
+                    Toast.makeText(ImageLib.this, "Type Something", Toast.LENGTH_SHORT).show();
+                }else{
+                    clearDataRecyclerView();
+                    Toast.makeText(ImageLib.this, "Please wait , fetching data", Toast.LENGTH_SHORT).show();
+                    q = mTypeSearch.getText().toString();
+                    getAPIdata();
+                }
+
             }
         });
 
